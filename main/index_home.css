@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+
+  body {
+    background: #0d0d0d;
+    color: white;
+    cursor: url(https://cursor.style/cursors/1335-nissan-cursor.svg), auto;
+  }
+  h2 {
+color: #1bce2a; /* Bright green for contrast */
+margin-bottom: 10px;
+}
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #454646;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6600;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #ff6600;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  @media (max-width: 600px) {
+    video{
+      display: none;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #222;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      width: 150px;
+      padding: 10px;
+      border: 1px solid #444;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .video-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-overlay h1 {
+    font-size: 2rem;
+    color: #1bce2a;
+    margin-bottom: 20px;
+  }
+
+  .r_btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: background 0.3s;
+  }
+
+  .r_btn:hover {
+    background-color: #e65c00;
+  }
+  .register-link {
+    display: inline-block;
+    margin: 20px auto;
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+
+
+  section {
+    padding: 30px 20px;
+  }
+  
+  .prize-pool {
+    font-size: 1.5rem;
+    color: #00ffcc;
+    margin: 20px 0;
+  }
+
+  .about-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #fd640c;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  .timeline-container {
+    padding: 20px 30px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  .timeline-container.left { left: 0; }
+  .timeline-container.right { left: 50%; }
+
+  .timeline-content {
+    padding: 20px 30px;
+    color: grey;
+    background-color: white;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(157, 8, 8, 0.1);
+    transition: all 0.3s ease-in-out;
+    animation: spin 2s linear infinite;
+  }
+
+  .timeline-container.left .timeline-content { margin-left: auto; }
+  .timeline-container.right .timeline-content { margin-right: auto; }
+
+  .timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    top: 24px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .timeline-container.left .timeline-dot { right: -8px; }
+  .timeline-container.right .timeline-dot { left: -8px; }
+
+  .timeline-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px #06a6e0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .timeline::after { left: 8px; }
+    .timeline-container { width: 100%; padding-left: 40px; padding-right: 25px; }
+    .timeline-container.right { left: 0; }
+    .timeline-dot { left: 0; }
+  }
+
+  .sec_lin {
+    display: inline-block;
+    margin: 20px auto;
+    background: #0cade7;
+    color: #0c0c0c;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+
+  .location {
+    width: 65%;
+    height: 35vh;
+    margin: 0 auto;
+  }
+
+  .inner_ab {
+    background-color: rgb(236, 239, 243);
+    color: rgb(10, 9, 16);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .footer-flex {
+background: #1a1a1a;
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: flex-start;
+text-align: center;
+gap: 20px;
+}
+
+.footer-flex a {
+color: #ff6600;
+text-decoration: none;
+display: block;
+margin-top: 5px;
+font-size: 1rem;
+}
+
+.footer-flex .contact-card {
+flex: 1 1 200px;
+color: white;
+}
+
+.footer-rights {
+width: 100%;
+text-align: center;
+color: #24dba4;
+margin-top: 15px;
+font-size: 0.9rem;
+}
